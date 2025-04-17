@@ -717,3 +717,174 @@ section h2::after {
   margin-top: 1rem;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
+
+
+/* Plans Section with Tables */
+.plans-container {
+  margin-top: 3rem;
+}
+
+.plan-table-container {
+  margin-bottom: 3rem;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.plan-table-container h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--dark-blue);
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 0.5rem;
+}
+
+.plan-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+
+.plan-table th {
+  background-color: var(--dark-blue);
+  color: white;
+  padding: 1rem;
+  text-align: left;
+}
+
+.plan-table td {
+  padding: 0.8rem;
+  border-bottom: 1px solid #eee;
+}
+
+.plan-table tr:last-child td {
+  border-bottom: none;
+}
+
+.plan-table tr:hover {
+  background-color: #f9f9f9;
+}
+
+.plan-image {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.plan-image img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Tables */
+@media (max-width: 768px) {
+  .plan-table-container {
+    padding: 1rem;
+  }
+  
+  .plan-table {
+    font-size: 0.9rem;
+  }
+  
+  .plan-table th,
+  .plan-table td {
+    padding: 0.6rem;
+  }
+}
+
+
+
+.benefits-scroll {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 1.2rem;
+  padding: 1rem 0;
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+}
+
+.benefits-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.benefits-scroll::-webkit-scrollbar-thumb {
+  background-color: var(--dark-blue);
+  border-radius: 4px;
+}
+
+.benefit-card {
+  min-width: 220px;
+  flex: 0 0 auto;
+  background-color: white;
+  padding: 1rem 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  scroll-snap-align: start;
+  font-size: 1rem;
+  color: var(--dark-blue);
+  text-align: center;
+  font-weight: 500;
+  transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+}
+
+.benefits-image img {
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  max-width: 100%;
+  height: auto;
+}
+
+/* Benefits Section */
+.benefits {
+  background-color: var(--light-gray);
+}
+
+.benefits h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  position: relative;
+  margin-bottom: 2rem;
+  color: var(--dark-blue);
+}
+
+.benefits h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: var(--gold);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Plans Section Optimization */
+.plans-container {
+  margin-top: 3rem;
+}
+
+.plan-table-container {
+  margin-bottom: 3rem;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  will-change: transform, opacity; /* Optimize rendering */
+}
+
+/* Lazy Load Images */
+.plan-image img {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.plan-image img.loaded {
+  opacity: 1;
+}
