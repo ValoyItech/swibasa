@@ -76,3 +76,24 @@ AOS.init({
   duration: 1000,
   once: true
 });
+
+// Lazy Load Images for Plans Section
+document.addEventListener('DOMContentLoaded', () => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        img.src = img.dataset.src;
+        img.classList.add('loaded');
+        observer.unobserve(img);
+      }
+    });
+  });
+
+  const planImages = document.querySelectorAll('.plan-image img');
+  planImages.forEach(img => {
+    img.dataset.src = img.src;
+    img.src = '';
+    observer.observe(img);
+  });
+});
