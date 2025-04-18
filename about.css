@@ -1,0 +1,367 @@
+/* About Section */
+.about {
+  background-color: var(--white);
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 3rem;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-text p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+.about-image {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+/* Gallery Section */
+.gallery {
+  background-color: var(--light-gray);
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.gallery-item {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Documents Section */
+.documents {
+  background-color: var(--white);
+}
+
+.documents-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.document-item {
+  display: flex;
+  background-color: var(--light-gray);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.document-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.document-icon {
+  font-size: 2rem;
+  color: var(--gold);
+  margin-right: 1.5rem;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.document-info {
+  flex: 1;
+}
+
+.document-info h3 {
+  margin-bottom: 0.5rem;
+  color: var(--dark-blue);
+}
+
+.document-info p {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.download-btn {
+  display: inline-block;
+  background-color: var(--dark-blue);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: var(--gold);
+  color: var(--dark-blue);
+}
+
+/* Contact Section on About Page */
+.contact {
+  background-color: var(--dark-blue);
+  color: var(--white);
+}
+
+.contact h2 {
+  color: var(--white);
+}
+
+.contact-details p {
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  line-height: 1.7;
+}
+
+.contact-details i {
+  color: var(--white);
+  font-size: 1.4rem;
+  margin-right: 0.8rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-details p:hover i {
+  color: var(--gold);
+  transform: scale(1.2);
+}
+
+.contact-form label {
+  color: var(--white);
+  font-size: 1.1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background-color: rgba(255, 255, 255, 0.95);
+  border: none;
+  color: #333;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+  }
+  
+  .documents-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-wrapper {
+    flex-direction: column;
+  }
+  
+  .contact-info, .contact-form {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 2rem;
+  }
+}
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@400;600&display=swap');
+
+/* Base Styles Update */
+body {
+  font-family: 'Poppins', 'Open Sans', sans-serif;
+  color: var(--dark-gray);
+  background-color: var(--white);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  color: var(--dark-blue);
+  margin-bottom: 1rem;
+}
+
+/* About Section */
+.about {
+  background-color: var(--white);
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 3rem;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-text p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: var(--dark-gray);
+}
+
+.about-image {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+/* AOS Animation Styles for About Section */
+[data-aos] {
+  opacity: 0;
+  position: relative;
+}
+
+[data-aos^="fade"] {
+  opacity: 0;
+  transition-property: opacity, transform;
+}
+
+[data-aos^="fade"] {
+  transform: translateZ(-100px);
+}
+
+[data-aos^="fade"].aos-animate {
+  opacity: 1;
+  transform: translateZ(0);
+}
+
+[data-aos="fade-right"] {
+  transform: translateX(100px);
+}
+
+[data-aos="fade-right"].aos-animate {
+  transform: translateX(0);
+}
+
+[data-aos="fade-left"] {
+  transform: translateX(-100px);
+}
+
+[data-aos="fade-left"].aos-animate {
+  transform: translateX(0);
+}
+
+
+.about-image {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .about-image img {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  
+  .about-image:hover img {
+    transform: perspective(1000px) rotateY(10deg);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+    filter: brightness(1.1);
+  }
+  
+  .about-image img:active {
+    transform: perspective(1000px) rotateY(-5deg);
+  }
+
+  /* Gallery Section */
+.gallery {
+    background-color: var(--light-gray);
+  }
+  
+  .gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .gallery-item {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    position: relative;
+    height: 200px;
+  }
+  
+  .gallery-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+  }
+  
+  .gallery-item:hover img {
+    filter: brightness(1.1) contrast(1.1);
+    transform: scale(1.05);
+  }
+  
+  /* Gallery Image Overlay Effect */
+  .gallery-item::after {
+    content: '\f06e';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 36, 99, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .gallery-item:hover::after {
+    opacity: 1;
+  }
