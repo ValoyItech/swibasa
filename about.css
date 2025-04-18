@@ -365,3 +365,55 @@ h1, h2, h3, h4, h5, h6 {
   .gallery-item:hover::after {
     opacity: 1;
   }
+
+  /* About Section */
+.about {
+  background-color: var(--white);
+  padding-top: 8rem; /* Add padding equal to the header height */
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 3rem;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-text p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: var(--dark-gray);
+}
+
+.about-image {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+  transform: perspective(1000px) rotateY(0deg);
+}
+
+.about-image:hover img {
+  transform: perspective(1000px) rotateY(10deg);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+  filter: brightness(1.1);
+}
+
+.about-image img:active {
+  transform: perspective(1000px) rotateY(-5deg);
+}
+
