@@ -1054,3 +1054,19 @@ section h2::after {
   border-radius: 12px;
   box-shadow: 0 6px 16px rgba(0,0,0,0.15);
 }
+
+.premium-row th {
+  color: var(--dark-blue);
+  font-weight: bold;
+  text-align: center;
+  padding: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid #ddd;
+}
+
+.plan-description {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  color: white;
+  margin-left: 0.5rem;
+}
