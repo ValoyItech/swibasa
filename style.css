@@ -1070,3 +1070,17 @@ section h2::after {
   color: white;
   margin-left: 0.5rem;
 }
+
+
+footer {
+  background-color: var(--dark-blue);
+  color: var(--white); /* Add this line to make text white */
+}
+
+footer a {
+  color: var(--white); /* Make links white */
+}
+
+footer a:hover {
+  color: var(--gold); /* Gold hover color for better visibility */
+}
